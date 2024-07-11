@@ -64,6 +64,6 @@ export const count = query({
             .withIndex("by_reciever", (q) => q.eq("reciever", currentUser._id))
             .collect();
 
-            return requests.length;
+            return requests.length; 
     },
 })
