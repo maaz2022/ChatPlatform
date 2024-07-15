@@ -9,6 +9,7 @@ const Layout = ({ children }: Props) => {
     <SidebarWrapper>
       <TooltipProvider>{children}</TooltipProvider>
     </SidebarWrapper>
+  
   );
 };
 

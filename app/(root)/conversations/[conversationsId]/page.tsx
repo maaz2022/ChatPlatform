@@ -5,13 +5,13 @@ import { Id } from "@/convex/_generated/dataModel";
 import { useQuery } from "convex/react";
 import { Loader2 } from "lucide-react";
 import React from "react";
-import Header from "./[conversationsId]/_components/Header";
-import Body from "./[conversationsId]/_components/body/Body";
-import ChatInput from "./[conversationsId]/_components/input/ChatInput";
+import ChatInput from "./_components/input/ChatInput";
+import Header from "./_components/Header";
+import Body from "./_components/body/Body";
 
 type Props = {
   params: {
-    conversationId: Id<"conversations">;
+    conversationId: Id<"conversations">; // Ensure conversationId is of type Id<"conversations">
   };
 };
 

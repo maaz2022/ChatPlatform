@@ -7,7 +7,8 @@ export const get = query({
     args: {},
     handler: async (ctx, args) => {
         const identity = await ctx.auth.getUserIdentity();
-
+        console.log("ass");
+        
         if (!identity) {
             throw new Error("Unauthorized");
         }
@@ -46,7 +47,8 @@ export const count = query({
     args:{},
     handler:async(ctx,args) => {
         const identity = await ctx.auth.getUserIdentity();
-
+        console.log(identity);
+        
         if (!identity) {
             throw new Error("Unauthorized");
         }

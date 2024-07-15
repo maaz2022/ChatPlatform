@@ -11,9 +11,12 @@ export const create = mutation({
     handler: async (ctx, args) => {
         const identity = await ctx.auth.getUserIdentity();
         if (!identity) {
+            
             throw new ConvexError("Unauthorized");
         }
         if (args.email === identity.email) {
+            
+
             throw new ConvexError("Can't send a request to yourself");
         }
         const currentUser = await getUserByClerkId({
@@ -21,6 +24,7 @@ export const create = mutation({
             clerkId: identity.subject,
         });
         if (!currentUser) {
+            
             throw new ConvexError("User not found");
         }
         const reciever = await ctx.db

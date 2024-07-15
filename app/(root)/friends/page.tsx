@@ -24,7 +24,7 @@ const FriendsPage = (props: Props) => {
                 imageUrl={request.sender.imageUrl}
                 username={request.sender.username}
                 email={request.sender.email}
-                />;
+                />; 
             })  : <Loader2 className="h-8 w-8"/>}
             </ItemList>
             <ConversationFallback/>
